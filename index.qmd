@@ -2,7 +2,7 @@
 title: "Example Website"
 description: "This is an example website you can feel free to use! Please credit me (Charles Lehnen)  and provide a link to my Github if you use it."
 about:
-  template: Jolla
+  template: jolla
 format:
   html:
     self-contained: true
