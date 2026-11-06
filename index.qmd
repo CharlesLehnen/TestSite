@@ -18,7 +18,7 @@ To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
 
 Start by choosing a [theme](https://quarto.org/docs/output-formats/html-themes.html) and setting it in [`_quarto.yml`](./_quarto.yml):
 
-```{yaml}
+```yaml
 format:
   html:
     theme: <set it here>
@@ -26,14 +26,14 @@ format:
 
 And then setting a [layout](https://quarto.org/docs/websites/website-about.html) here in [this page's](./index.qmd) YAML block:
 
-```{yaml}
+```yaml
 about:
   template: <set it here>
 ```
 
 Add more pages by making more `.qmd` files in the root folder and then linking to them in your text or adding them to the navbar in [_quarto.yml](./quarto.yml):
 
-```{yaml}
+```yaml
 website:
   title: "Example Website"
   navbar:
@@ -48,14 +48,14 @@ Now you can keep changing the YAML blocks for more customization! Here are some 
 
 a) A main site image:
 
-```{yaml}
+```yaml
 image: <path to image>
 image-alt: "<text describing your image>"
 ```
 
 b) Fancy links to your social media/Google Scholar/etc:
 
-```{yaml}
+```yaml
 about:
   links:
     - text:
@@ -66,7 +66,7 @@ about:
 
 c) Bibliography 
 
-```{yaml}
+```yaml
 bibliography: <path to a .bib file>
 ```
 
@@ -74,7 +74,7 @@ Whatever you in-text cite using the `@<code for a given citation source>` will t
 
 Then add the following where you want your bibliography to appear:
 
-```{markdown}
+```markdown
 # References
 ```
 
