@@ -1,7 +1,82 @@
 ---
-title: "TestSite"
+title: "Example Website"
+description: "This is an example website you can feel free to use! Please credit me (Charles Lehnen)  and provide a link to my Github if you use it."
+image:
+image-alt: ""
+about:
+  template: Jolla
+  links:
+    - text:
+      icon:
+      url:
+format:
+  html:
+    self-contained: true
+    toc: true
+comments: false
 ---
 
 This is a Quarto website.
 
 To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+
+Start by choosing a [theme](https://quarto.org/docs/output-formats/html-themes.html) and setting it in [`_quarto.yml`](./_quarto.yml):
+
+```{yaml}
+format:
+  html:
+    theme: <set it here>
+```
+
+And then setting a [layout](https://quarto.org/docs/websites/website-about.html) here in [this page's](./index.qmd) YAML block:
+
+```{yaml}
+about:
+  template: <set it here>
+```
+
+Add more pages by making more `.qmd` files in the root folder and then linking to them in your text or adding them to the navbar in [_quarto.yml](./quarto.yml):
+
+```{yaml}
+website:
+  title: "Example Website"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+```
+
+
+Now you can keep changing the YAML blocks for more customization! 
+
+
+### How did I set this up?
+
+1) Created a new folder
+2) Ran this in the command line `quarto create project website` and followed the prompts
+3) Made the [publish.yml file](./.github/workflows/publish.yml) which should be copy/pasted directly
+4) Published the repo to Github
+5) In Github, added a "gh-pages" branch
+6) Went to "Settings > Pages" to get my URL
+
+Then I had a website!
+
+### Want a custom domain?
+
+1) Buy a domain name
+2) In the advanced DNS settings add the following which are for Github Pages:
+| Type         | Host | Value                  | TTL       |
+|--------------|------|------------------------|-----------|
+| A Record     | @    | 185.199.108.153        | Automatic |
+| A Record     | @    | 185.199.109.153        | Automatic |
+| A Record     | @    | 185.199.110.153        | Automatic |
+| A Record     | @    | 185.199.111.153        | Automatic |
+| AAAA Record  | @    | 2606:50c0:8000::153   | Automatic |
+| AAAA Record  | @    | 2606:50c0:8001::153   | Automatic |
+| AAAA Record  | @    | 2606:50c0:8003::153   | Automatic |
+| CNAME Record | www  | <Your Github Username>.github.io. | Automatic |
+
+3) Add a new file in your root folder called "CNAME" and only add the following text to it: www.<Your URL>.com
+4) Commit/push
+5) Go to "Settings > Pages" to add your custom URL
