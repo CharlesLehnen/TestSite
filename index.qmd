@@ -1,19 +1,15 @@
 ---
 title: "Example Website"
 description: "This is an example website you can feel free to use! Please credit me (Charles Lehnen)  and provide a link to my Github if you use it."
-image:
-image-alt: ""
 about:
   template: Jolla
-  links:
-    - text:
-      icon:
-      url:
 format:
   html:
     self-contained: true
     toc: true
 comments: false
+author: "Charles Lehnen"
+lang: eng
 ---
 
 This is a Quarto website.
@@ -48,8 +44,39 @@ website:
 ```
 
 
-Now you can keep changing the YAML blocks for more customization! 
+Now you can keep changing the YAML blocks for more customization! Here are some more things you can add:
 
+a) A main site image:
+
+```{yaml}
+image: <path to image>
+image-alt: "<text describing your image>"
+```
+
+b) Fancy links to your social media/Google Scholar/etc:
+
+```{yaml}
+about:
+  links:
+    - text:
+      icon:
+      url:
+
+```
+
+c) Bibliography 
+
+```{yaml}
+bibliography: <path to a .bib file>
+```
+
+Whatever you in-text cite using the `@<code for a given citation source>` will then automatically be added to that pages bibliography
+
+Then add the following where you want your bibliography to appear:
+
+```{markdown}
+# References
+```
 
 ### How did I set this up?
 
