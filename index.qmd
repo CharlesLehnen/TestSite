@@ -1,6 +1,6 @@
 ---
 title: "Example Website"
-description: "This is an example website you can feel free to use! Please credit me (Charles Lehnen)  and provide a link to my Github if you use it."
+description: "This is an example website you can feel free to use! Please credit me ([Charles Lehnen](https://github.com/CharlesLehnen))  and provide a link to [this repo's source](https://github.com/CharlesLehnen/Website_Template) if you use it."
 format:
   html:
     self-contained: true
@@ -10,9 +10,9 @@ author: "Charles Lehnen"
 lang: eng
 ---
 
-This is a Quarto website.
+***
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+### Getting Started
 
 Start by choosing a [theme](https://quarto.org/docs/output-formats/html-themes.html) and setting it in [`_quarto.yml`](./_quarto.yml):
 
@@ -101,7 +101,7 @@ Then I had a website!
 | AAAA Record  | @    | 2606:50c0:8000::153   | Automatic |
 | AAAA Record  | @    | 2606:50c0:8001::153   | Automatic |
 | AAAA Record  | @    | 2606:50c0:8003::153   | Automatic |
-| CNAME Record | www  | <Your Github Username>.github.io. | Automatic |
+| CNAME Record | www  | `<Your Github Username>`.github.io. | Automatic |
 
 3) Add a new file in your root folder called "CNAME" and only add the following text to it: www.<Your URL>.com
 4) Commit/push
